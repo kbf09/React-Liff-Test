@@ -6,20 +6,20 @@ import ShareButton from '../component/ShareButton';
 const liff = window.liff;
 const TOSEN = 7.4
 const BUTTON_COUNT = 5;
-// 0.48*0.07+0.39*0.1+0.07*0.4+0.03*0.9+0.01*1 = 0.1376
+// 0.49*0.07+0.4*0.09+0.07*0.45+0.03*0.87+0.01*1 = 0.1379
 // 1/7.4 = 0.1351
 // この値はだいたい1/7.4に近いので良しとする。
 const KAKURITSU = {
     BLUE  : 7,  
-    GREEN : 10,  
-    RED  : 40, 
-    GOLD  : 90, 
+    GREEN : 9,  
+    RED  : 45, 
+    GOLD  : 87, 
     RAINBOW    : 100
 }
 
 const WARIAI = {
-    BLUE: 48,
-    GREEN: 41,
+    BLUE: 49,
+    GREEN: 40,
     RED: 7,
     GOLD: 3,
     RAINBOW: 1
