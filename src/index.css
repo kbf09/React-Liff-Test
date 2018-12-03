@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.center {
+  text-align: center;
+}
+
+.blue {
+  background-color: aqua;
+}
+
+.green {
+  background-color: chartreuse;
+}
+
+.red {
+  background-color: red;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.rainbow {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+}
+
+.size {
+  height: 40px;
+  width:40px;
+}
