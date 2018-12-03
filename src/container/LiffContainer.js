@@ -125,11 +125,19 @@ class LiffContainer extends Component {
     render() {
         return (
             <div className="center">
-                <h3>最終決戦</h3>
-                <StartButton 
-                    disabled={this.state.startButtonStatus} 
-                    onClick={()=>{this.onClickStartButton();}}
-                />
+                <div className="pure-g">
+                    <div className="pure-u-1-2">
+                        <StartButton 
+                            disabled={this.state.startButtonStatus} 
+                            onClick={()=>{this.onClickStartButton();}}
+                        />
+                    </div>
+                    <div className="pure-u-1-2">
+                        <ShareButton onClick={()=>{this.onClickShareButton();}} />
+                    </div>
+                    
+                </div>
+                
                 <div className="pure-g">
                     <CheckButton 
                         className="pure-u-1-3" 
@@ -154,8 +162,7 @@ class LiffContainer extends Component {
                         status={this.state.checkButtons[4]}
                     />
                 </div>
-                <ShareButton onClick={()=>{this.onClickShareButton();}} />
-                {this.state.test}
+                
             </div>
         );
     }
