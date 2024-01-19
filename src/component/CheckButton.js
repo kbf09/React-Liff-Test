@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classNames  from '../../node_modules/classnames'
+import classNames  from 'classnames'
 
 
 class CheckButton extends Component {

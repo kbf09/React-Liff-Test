@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import StartButton from '../component/StartButton';
 import CheckButton from '../component/CheckButton';
 import ShareButton from '../component/ShareButton';
+import liff from '@line/liff';
 
-const liff = window.liff;
-const TOSEN = 7.4
+// const TOSEN = 7.4
 const BUTTON_COUNT = 5;
 // 0.49*0.07+0.4*0.09+0.07*0.45+0.03*0.87+0.01*1 = 0.1379
 // 1/7.4 = 0.1351
@@ -115,11 +115,18 @@ class LiffContainer extends Component {
             returnText += `${chkBtns[i].id+1}:${colors[chkBtns[i].color]}${chkBtns[i].flag?"V":""} `;
         }   
 
-        liff.init();
-
-        if(this.state.startFlag)
-            liff.sendMessages([{type:'text', text: returnText}]);
-        liff.closeWindow();
+        liff.init({
+            liffId: "1657779757-A5n1DWlX", 
+        }).then(() => {
+                liff.ready.then(() => {
+                    if(this.state.startFlag) {
+                        liff.sendMessages([{type:'text', text: returnText}])
+                            .then(() => {
+                                liff.closeWindow();
+                            });   
+                    }
+                });
+            });
     }
 
     render() {
